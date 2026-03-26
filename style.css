@@ -1,0 +1,920 @@
+:root {
+    --text-color: #1a1c20;
+    --link-color: #5f82e0;
+    --background-color: #eeeff1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    background-image: url("Foto's/matrix background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/*wrapper*/
+.wrapper {
+    width: fit-content;
+    min-width: 60%;
+    max-width: 98%;
+    min-height: 100%; /* grow if the content is bigger than the screen. */
+    margin: 0 auto;
+    background: #b1b1b1;
+    background: linear-gradient(180deg, rgba(222, 222, 222, 1) 0%, rgb(155, 155, 155) 50%);
+    padding: 2%;
+    display: flex;            /* flex container */
+    flex-direction: column;   /* vertical (top → bottom) */
+    overflow: visible;
+}
+
+/* Nav bar */
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2% 5%;
+    min-height: 5%;
+    overflow: visible;
+}
+
+nav .left a {
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav .right a {
+    color: var(--text-color);
+    margin: 0 10px;
+
+}
+
+nav .right {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    position: relative;
+    max-width: 100%;
+}
+
+/* Header table navigation buttons */
+.table-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #f5f5f5, #dcdcdc);
+    color: #1a1c20;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 4px 6px;
+    border: 1px solid #c9c9c9;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    flex-shrink: 0;
+}
+
+.table-link:hover {
+    background: linear-gradient(180deg, #ffffff, #e6e6e6);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Search bar styling */
+.search-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.search-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    margin-left: 10px;
+    flex-shrink: 0;
+}
+
+.search-input {
+    order: 1;
+    border: none;
+    outline: none;
+    padding: 8px 12px;
+    border-radius: 999px;
+    min-width: 240px;
+    font-size: 14px;
+    background: #f7f7f7;
+}
+
+.search-input:focus {
+    background: #ffffff;
+    box-shadow: inset 0 0 0 2px #70737c;
+}
+
+.search-btn {
+    order: 1;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: #70737c;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.search-btn:hover {
+    background: #70737c;
+    transform: translateY(-1px);
+}
+
+.suggestion {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 0;
+    max-width: 360px;
+    white-space: normal;
+    word-break: break-word;
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 6px;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    z-index: 1000;
+}
+
+.suggestion-button {
+    border: none;
+    background: #eef2ff;
+    color: #334155;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.suggestion-button:hover {
+    background: #dbe4ff;
+}
+
+.search-help {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 14px;
+    display: inline-flex;
+    justify-content: flex-end;
+    z-index: 1001;
+}
+
+.search-help-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    color: #555;
+    font-weight: 700;
+    font-size: 11px;
+    border: 1px solid #d0d0d0;
+    cursor: help;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.search-help:hover .search-help-icon {
+    border-color: #b8b8b8;
+    transform: translateY(-1px);
+}
+
+/* Print button styling */
+.print-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-left: 10px;
+    margin-top: 0;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.print-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.print-btn:hover::before {
+    width: 100px;
+    height: 100px;
+}
+
+.print-btn:hover {
+    background: linear-gradient(135deg, #ff5252 0%, #d63031 100%);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.5);
+}
+
+.print-btn:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+
+.table-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background-color: #e1e1e1;
+    color: var(--text-color);
+    font-size: 14px;
+    margin: 0 6px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.table-link:hover {
+    background-color: #d0d0d0;
+    transform: translateY(-1px);
+}
+
+/*afstand tussen iconen en tekst*/
+nav .right a span {
+    margin-left: 0px;
+}
+
+/* de HUB knop */
+nav .right a:last-child {
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 10px;
+
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  margin-top: auto;
+  width: 100%;
+  background-color: rgb(90, 90, 90);
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    border: none;
+    background-color: #686d7a;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: #5a5e66;
+    transform: translateY(-2px);
+}
+
+/*section 1 - Hero*/
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3%;
+    margin: 5% 0;
+    margin-bottom: 10%;
+    align-items: center;
+    gap: 6%;
+}
+
+.hero-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #1a1c20;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+
+/*text in hero section*/
+.hero-section .text {
+    flex: 5;
+}
+
+.hero-section .text h2 {
+    font-size: 35px;
+}
+
+/*links in hero section*/
+.hero-section .text .links {
+    margin-top: 25px;
+}
+
+.hero-section .text .links a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.hero-section .text .links a:hover {
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+
+/*Sectie 2 - Team data*/
+.team-data {
+    padding: 0 3%;
+    margin: 5% 0;
+    margin-bottom: 10%;
+    align-items: center;
+    gap: 6%;
+}
+
+.team-data .Data h2 {
+    margin-bottom: 20px;
+}
+
+.team-data .text {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/*opmaak gegevens*/
+
+.team-data .record {
+    background: #dddddd;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    text-align: left;          /* anders blijft het gecentreerd */
+}
+
+.team-data .record p {
+    margin: 3px 0;
+}
+
+/* Data table styling */
+/* Wrapper for table to enable horizontal scrolling */
+.table-wrapper {
+    width: 100%;
+    overflow-x: visible;
+    overflow-y: visible;
+    margin: 2% 0;
+    background: transparent;
+    border-radius: 8px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 8px;
+    margin: 0;
+    table-layout: auto;
+}
+
+.data-table thead {
+    background: transparent;
+}
+
+.data-table th {
+    background: #686d7a;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    border-radius: 6px;
+    box-shadow: 0 0.2% 0.4% rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    min-width: 80px;
+}
+
+.data-table td {
+    background: #dddddd;
+    padding: 10px 15px;
+    text-align: left;
+    border-radius: 6px;
+    box-shadow: 0 0.1% 0.3% rgba(0, 0, 0, 0.08);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    min-width: 80px;
+}
+
+.data-table tbody tr:hover td {
+    background: #e8e8e8;
+    transition: background 0.2s ease;
+}
+
+@keyframes highlight-column {
+    0% {
+        background-color: #ffe066;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+.highlight-column {
+    animation: highlight-column 1s ease-in-out;
+}
+
+@keyframes highlight-table {
+    0% {
+        background-color: #b3e5fc;
+        box-shadow: 0 0 15px rgba(63, 81, 181, 0.5);
+    }
+    100% {
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+
+.highlight-table {
+    animation: highlight-table 1.5s ease-in-out;
+}
+
+@keyframes highlight-row {
+    0% {
+        background-color: #ffeb3b;
+        box-shadow: inset 0 0 10px rgba(255, 235, 59, 0.7);
+    }
+    50% {
+        background-color: #fff59d;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+.highlight-row {
+    animation: highlight-row 1.5s ease-in-out;
+}
+
+.highlight-row td {
+    animation: highlight-row 1.5s ease-in-out;
+}
+
+/*section 3 - Contact formulier*/
+.Contact.formulier {
+    padding: 0 25px;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+.Contact.formulier .group {
+    display: flex;
+    gap: 50px;
+}
+
+.Contact.formulier .group .text {
+    flex: 3;
+    margin-top: 20px;
+}
+
+.Contact.formulier .group form {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.Contact.formulier .group form input,
+.Contact.formulier .group form textarea {
+    font-family: poppins, sans-serif;
+    border: 2px solid var(--link-color);
+    background-color: var(--background-color);
+    padding: 5px;
+    margin-bottom: 10px;
+    outline: none;
+    resize: none;
+}
+
+.Contact.formulier .group form button {
+    font-size: 16px;
+    font-family: poppins, sans-serif;
+    color: #ffffff;
+    background-color: var(--link-color);
+    border: none;
+    height: 50px;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.Contact.formulier .group form button:hover {
+    filter: brightness(.9);
+}
+
+/* Responsive Design */
+
+
+@media (max-width: 1170px) { 
+    /*wrapper*/
+    .wrapper {
+        min-width: 75%;
+        max-width: 95%;
+        min-height:100%
+    }
+}
+
+@media (max-width: 800px) { 
+    /*wrapper*/
+    .wrapper {
+        min-width: 90%;
+        max-width: 98%;
+        min-height:100%
+    }
+
+    /* Nav bar */
+    nav {
+        padding: 0 2%;
+    }
+
+    nav .left a {
+        font-size: 28px;
+    }
+
+    nav .left a span {
+        display: none;
+    }
+
+    nav .right a {
+        font-size: 22px;
+    }
+
+    nav .right a span {
+        display: none;
+    }
+
+    /*sectie 1 - Hero*/
+    .hero-section {
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .hero-section .text h2 {
+        font-size: 28px;
+    }
+
+    /* Sectie 2 - Team data */
+    .projecten {
+        padding: 0;
+    }
+
+    /*sectie 3 - Contact Formulier*/
+    .Contact.formulier .group {
+        padding: 0;
+    }
+
+    /* Responsive table improvements */
+    .data-table th,
+    .data-table td {
+        padding: 8px 12px;
+        font-size: 0.875em;
+        min-width: 60px;
+    }
+
+    .table-wrapper {
+        margin: 1.5% 0;
+    }
+
+}
+
+@keyframes highlight {
+    0% {
+        background-color: yellow;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes highlight-column {
+    0% {
+        background-color: #ffe066;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+.highlight-column {
+    animation: highlight-column 1s ease-in-out;
+}
+
+/* Print mode - hide everything except table */
+.print-mode .wrapper > *:not(main),
+.print-mode nav,
+.print-mode .hero-section,
+.print-mode .back-to-top,
+.print-mode .search-wrapper,
+.print-mode .print-btn,
+.print-mode footer,
+.print-mode .team-data > *:not(.text),
+.print-mode .text > *:not(.Data) {
+    display: none !important;
+}
+
+.print-mode section.Data {
+    margin: 0 !important;
+    padding: 20px !important;
+}
+
+.print-mode body {
+    background: white !important;
+}
+
+@media print {
+    .wrapper > *:not(main),
+    nav,
+    .hero-section,
+    .back-to-top,
+    .search-wrapper,
+    .print-btn,
+    footer,
+    .team-data > *:not(.text),
+    .text > *:not(.Data) {
+        display: none !important;
+    }
+    
+    section.Data {
+        margin: 0 !important;
+        padding: 20px !important;
+    }
+    
+    body {
+        background: white !important;
+    }
+}
+
+/* Admin Mode Styles */
+.admin-btn-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-left: 10px;
+    margin-top: 0;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.admin-btn-toggle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.admin-btn-toggle:hover::before {
+    width: 100px;
+    height: 100px;
+}
+
+.admin-btn-toggle:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.admin-btn-toggle:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+/* Admin Controls */
+.admin-controls {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.admin-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.admin-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(102, 126, 234, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.admin-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.admin-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+    background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%);
+}
+
+.admin-btn:active {
+    transform: translateY(-1px);
+}
+
+.admin-btn.danger {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.admin-btn.danger::before {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.admin-btn.danger:hover {
+    background: linear-gradient(135deg, #ff5252 0%, #d63031 100%);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
+
+.admin-btn i {
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.admin-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Editable cells in admin mode */
+.admin-mode .editable-cell {
+    cursor: text;
+    border: 2px solid transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.admin-mode .editable-cell:hover {
+    border-color: #667eea;
+    background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%) !important;
+    transform: scale(1.02);
+}
+
+.admin-mode .editable-cell:focus {
+    outline: none;
+    border-color: #764ba2;
+    background: #fff !important;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+    transform: scale(1.02);
+}
+
+.cell-updated {
+    animation: cell-update 1s ease;
+}
+
+@keyframes cell-update {
+    0% {
+        background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%) !important;
+        transform: scale(1.05);
+    }
+    100% {
+        background: transparent;
+        transform: scale(1);
+    }
+}
+
+/* Admin mode indicator */
+.admin-mode::before {
+    content: "🔓 ADMIN MODE";
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 13px;
+    z-index: 10000;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    animation: pulse-glow 2s infinite;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    letter-spacing: 1px;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        opacity: 1;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+    50% {
+        opacity: 0.9;
+        box-shadow: 0 6px 25px rgba(102, 126, 234, 0.6);
+    }
+}
