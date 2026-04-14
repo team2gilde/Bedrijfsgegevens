@@ -1,9 +1,9 @@
-# Verslag In Makkelijke Woorden - UrenRegistratieSysteem
+# Bedrijfsgegevens
 
 ## 1. Inleiding
 Dit verslag legt de hele website uit in eenvoudige taal. Het doel is dat iemand zonder technische achtergrond toch goed snapt hoe de site werkt.
 
-De website heet **UrenRegistratieSysteem**. Je gebruikt deze site om gegevens van een bedrijf bij te houden, zoals:
+De website heet **Bedrijfsgegevens**. Je gebruikt deze site om gegevens van een bedrijf bij te houden, zoals:
 - klanten
 - medewerkers
 - projecten

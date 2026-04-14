@@ -1,13 +1,5 @@
 # Admin Mode Guide
 
-## Password
-Default password: `8008135`
-
-To change the password, edit line 3 in `admin.js`:
-```javascript
-const ADMIN_PASSWORD = '8008135'; // Change this
-```
-
 ## How to Use
 
 ### 1. Enable Admin Mode
