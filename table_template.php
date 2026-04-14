@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
     <meta charset="utf-8">
-    <title>UrenRegistratieSysteem</title>
+    <title>Bedrijfsgegevens</title>
     <script src="searchfunction.js" defer></script>
     <script src="admin.js" defer></script>
     <link rel="stylesheet" href="style.css">
@@ -78,7 +78,7 @@
     <main>
         <section class="hero-section">
             <div class="text">
-                <h2>UrenRegistratieSysteem</h2>
+                <h2>Bedrijfsgegevens</h2>
             </div>
         </section>
 

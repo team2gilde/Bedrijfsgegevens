@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
     <meta charset="utf-8">
-    <title>UrenRegistratieSysteem</title>
+    <title>Bedrijfsgegevens</title>
     <!-- Centrale stylesheet voor layout en componentopmaak. -->
     <link rel="stylesheet" href="style.css">
     <!-- Externe iconbibliotheek voor UI-iconen. -->

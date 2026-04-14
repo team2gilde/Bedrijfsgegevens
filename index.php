@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
     <meta charset="utf-8">
-    <title>UrenRegistratieSysteem</title>
+    <title>Bedrijfsgegevens</title>
     <!-- JavaScript voor zoeken, navigatiehulp en interactieve UI-functies. -->
     <script src="searchfunction.js" defer></script>
     <script src="admin.js" defer></script>
@@ -75,7 +75,7 @@
                 <!-- Introsectie met systeemtitel. -->
                 <section class="hero-section">
                     <div class="text">
-                        <h2>UrenRegistratieSysteem</h2>
+                        <h2>Bedrijfsgegevens</h2>
                     </div>
                 </section>
             <!-- Voettekst met team- en jaaraanduiding. -->
