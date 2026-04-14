@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4762b3ad-e280-41d4-bd2d-bc510ceb8e24" name="Changes" comment="obfuscate admin.js">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin.min.js" beforeDir="false" />
-    </list>
+    <list default="true" id="4762b3ad-e280-41d4-bd2d-bc510ceb8e24" name="Changes" comment="FUUUUUUUUUUUUUUUUUCK GITIGNORE WHY ARE YOU NOT WORKINGGGGGGGGGGGG" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,7 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1772538477405</updated>
       <workItem from="1772538479230" duration="38000" />
-      <workItem from="1776152764177" duration="1423000" />
+      <workItem from="1776152764177" duration="1742000" />
     </task>
     <task id="LOCAL-00001" summary="update gitignore">
       <option name="closed" value="true" />
@@ -106,7 +103,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776154092705</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix a few more things aaaaaaaaaaa">
+      <option name="closed" value="true" />
+      <created>1776154250409</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1776154250409</updated>
+    </task>
+    <task id="LOCAL-00006" summary="FUUUUUUUUUUUUUUUUUCK GITIGNORE WHY ARE YOU NOT WORKINGGGGGGGGGGGG">
+      <option name="closed" value="true" />
+      <created>1776154386701</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1776154386701</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +130,8 @@
     <MESSAGE value="Update .gitignore, removal of unnecessary files, update README" />
     <MESSAGE value="update gitignore again because I'm stupid" />
     <MESSAGE value="obfuscate admin.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="obfuscate admin.js" />
+    <MESSAGE value="fix a few more things aaaaaaaaaaa" />
+    <MESSAGE value="FUUUUUUUUUUUUUUUUUCK GITIGNORE WHY ARE YOU NOT WORKINGGGGGGGGGGGG" />
+    <option name="LAST_COMMIT_MESSAGE" value="FUUUUUUUUUUUUUUUUUCK GITIGNORE WHY ARE YOU NOT WORKINGGGGGGGGGGGG" />
   </component>
 </project>
