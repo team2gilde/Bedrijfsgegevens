@@ -4,3 +4,6 @@ package-lock.json
 /node_modules/
 /.idea/
 /.vscode/
+/admin.orignal.js
+/admin.minsnin.js
+/admin.og.js
