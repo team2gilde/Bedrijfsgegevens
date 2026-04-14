@@ -5,9 +5,9 @@ header('Content-Type: application/json');
 // Database-instellingen voor de lokale MySQL-verbinding.
 $servername = "127.0.0.1";
 $username = "root";
-$password = "";
+$password = "root";
 $dbname = "UrenRegistratieSysteem";
-$dbport = 3307;
+$dbport = 3306;
 
 mysqli_report(MYSQLI_REPORT_OFF);
 // Maak een nieuwe databaseverbinding aan met de opgegeven configuratie.

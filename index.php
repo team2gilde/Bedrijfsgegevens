@@ -26,9 +26,9 @@
                     // Bouw navigatieknoppen op basis van alle tabellen die in de database bestaan.
                     $servername = "127.0.0.1";
                     $username   = "root";
-                    $password   = "";
+                    $password   = "root";
                     $dbname     = "UrenRegistratieSysteem";
-                    $dbport     = 3307;
+                    $dbport     = 3306;
 
                     // Maak verbinding; als dat lukt tonen we alle tabelpagina-links.
                     mysqli_report(MYSQLI_REPORT_OFF);

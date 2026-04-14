@@ -7,9 +7,9 @@ header('Content-Type: application/json');
 // Databaseconfiguratie voor de lokale MySQL-instantie.
 $servername = "127.0.0.1";
 $username = "root";
-$password = "";
+$password = "root";
 $dbname = "UrenRegistratieSysteem";
-$dbport = 3307;
+$dbport = 3306;
 
 mysqli_report(MYSQLI_REPORT_OFF);
 // Open een verbinding; bij fout wordt direct een JSON-fout teruggegeven.
