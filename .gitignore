@@ -5,5 +5,5 @@ package-lock.json
 /.idea/
 /.vscode/
 /admin.orignal.js
-/admin.minsnin.js
+/admin.min.js
 /admin.og.js
